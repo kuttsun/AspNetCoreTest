@@ -52,9 +52,10 @@ namespace MultilingualWebsite
 
             var supportedCultures = new[]
             {
-                new CultureInfo("ja-JP"),
                 new CultureInfo("ja"),
                 new CultureInfo("en"),
+                new CultureInfo("zh"),
+                new CultureInfo("ko"),
             };
 
             app.UseRequestLocalization(new RequestLocalizationOptions
