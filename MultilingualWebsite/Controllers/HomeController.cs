@@ -13,15 +13,18 @@ namespace MultilingualWebsite.Controllers
     public class HomeController : Controller
     {
         private readonly IStringLocalizer<HomeController> localizer;
+        private readonly IStringLocalizer<SharedResource> sharedLocalizer;
 
-        public HomeController(IStringLocalizer<HomeController> localizer)
+        public HomeController(IStringLocalizer<HomeController> localizer, IStringLocalizer<SharedResource> sharedLocalizer)
         {
             this.localizer = localizer;
+            this.sharedLocalizer = sharedLocalizer;
         }
 
         public IActionResult Index()
         {
             ViewData["Message"] = localizer["これは日本語"];
+            ViewData["Common"] = sharedLocalizer["これは共通の日本語"];
 
             return View();
         }

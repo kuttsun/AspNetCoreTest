@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IHtmlLocalizer<SharedResource> sharedLocalizer;
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -41,7 +45,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - MultilingualWebsite</p>
+            <p>&copy; 2017 - @sharedLocalizer["フッター"]</p>
         </footer>
     </div>
 
