@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using MultilingualWebsite.Models;
 
 using Microsoft.Extensions.Localization;
+using System.Reflection;
 
 namespace MultilingualWebsite.Controllers
 {
@@ -15,15 +16,23 @@ namespace MultilingualWebsite.Controllers
         private readonly IStringLocalizer<HomeController> localizer;
         private readonly IStringLocalizer<SharedResource> sharedLocalizer;
 
-        public HomeController(IStringLocalizer<HomeController> localizer, IStringLocalizer<SharedResource> sharedLocalizer)
+        private readonly IStringLocalizer messageLocalizer;
+
+        public HomeController(IStringLocalizer<HomeController> localizer, IStringLocalizer<SharedResource> sharedLocalizer, IStringLocalizerFactory factory)
         {
             this.localizer = localizer;
             this.sharedLocalizer = sharedLocalizer;
+
+            var type = typeof(MessageResource);
+            var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
+            messageLocalizer = factory.Create(type);
+            //messageLocalizer = factory.Create(nameof(MessageResource), assemblyName.Name );
         }
 
         public IActionResult Index()
         {
-            ViewData["Message"] = localizer["これは日本語"];
+            ViewData["Message"] = messageLocalizer["メッセージ"];
+            //ViewData["Message"] = localizer["これは日本語"];
             ViewData["Common"] = sharedLocalizer["これは共通の日本語"];
 
             return View();
