@@ -24,8 +24,8 @@ namespace MultilingualWebsite.Controllers
 
         public IActionResult Index()
         {
-            ViewData["Message"] = localizer["これは日本語"];
-            ViewData["Common"] = sharedLocalizer["これは共通の日本語"];
+            ViewData["Message"] = localizer["こんにちは"];
+            ViewData["Common"] = localizer["テスト"];
 
             return View();
         }
@@ -33,7 +33,7 @@ namespace MultilingualWebsite.Controllers
         public IActionResult About()
         {
             //ViewData["Message"] = "Your application description page.";
-            ViewData["Message"] = localizer["これは日本語"];
+            ViewData["Message"] = localizer["こんにちは"];
 
             return View();
         }
