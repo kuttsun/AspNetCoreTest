@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="これは共通の日本語" xml:space="preserve">
-    <value>これは英語（共通）</value>
+  <data name="footer" xml:space="preserve">
+    <value>footer</value>
   </data>
-  <data name="フッター" xml:space="preserve">
-    <value>このフッターは英語</value>
+  <data name="language" xml:space="preserve">
+    <value>English(common)</value>
+  </data>
+  <data name="share1" xml:space="preserve">
+    <value>share1</value>
   </data>
 </root>

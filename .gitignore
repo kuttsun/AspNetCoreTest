@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# リソースファイル作成時に Visual Studio が自動生成する .Designer.cs ファイルは ASP.NET Core では不要
+MultilingualWebsite/Resources/**/*.Designer.cs

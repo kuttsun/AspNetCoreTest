@@ -13,19 +13,22 @@ namespace MultilingualWebsite.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IStringLocalizer<HomeController> localizer;
-        private readonly IStringLocalizer<SharedResource> sharedLocalizer;
+        readonly IStringLocalizer<HomeController> localizer;
+        readonly IStringLocalizer<SharedResource> sharedLocalizer;
+        readonly IStringLocalizer<MessageResource> messageLocalizer;
 
-        public HomeController(IStringLocalizer<HomeController> localizer, IStringLocalizer<SharedResource> sharedLocalizer, IStringLocalizerFactory factory)
+        public HomeController(IStringLocalizer<HomeController> localizer, IStringLocalizer<SharedResource> sharedLocalizer, IStringLocalizer<MessageResource> messageLocalizer, IStringLocalizerFactory factory)
         {
             this.localizer = localizer;
             this.sharedLocalizer = sharedLocalizer;
+            this.messageLocalizer = messageLocalizer;
         }
 
         public IActionResult Index()
         {
-            ViewData["Message"] = localizer["こんにちは"];
-            ViewData["Common"] = localizer["テスト"];
+            ViewData["Message"] = localizer["Hello"];
+            ViewData["test"] = localizer["Test"];
+            ViewData["Common"] = sharedLocalizer["share1"] + messageLocalizer["Mes1"];
 
             return View();
         }
@@ -33,7 +36,7 @@ namespace MultilingualWebsite.Controllers
         public IActionResult About()
         {
             //ViewData["Message"] = "Your application description page.";
-            ViewData["Message"] = localizer["こんにちは"];
+            ViewData["Message"] = localizer["Hello"];
 
             return View();
         }
