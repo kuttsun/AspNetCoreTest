@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using SignalR.Models.SignalR;
+
 namespace SignalR
 {
     public class Startup
@@ -21,6 +23,7 @@ namespace SignalR
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSignalR();// <-- SignalR
             services.AddMvc();
         }
 
@@ -44,6 +47,11 @@ namespace SignalR
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            app.UseSignalR(routes =>  // <-- SignalR
+            {
+                routes.MapHub<SignalRTest>(nameof(SignalRTest));// この引数で指定した文字列が Hub の URL となる
             });
         }
     }
