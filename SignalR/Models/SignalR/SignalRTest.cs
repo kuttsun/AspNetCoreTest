@@ -11,6 +11,7 @@ namespace SignalR.Models.SignalR
     {
         public Task Send(string data)
         {
+            // 接続している人にブロードキャストで送信
             return Clients.All.InvokeAsync("AddMessage", data);
         }
     }

@@ -41,6 +41,7 @@ namespace SignalR
             }
 
             app.UseStaticFiles();
+            app.UseFileServer();
 
             app.UseMvc(routes =>
             {

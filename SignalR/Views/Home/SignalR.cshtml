@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "SignalR Test";
+}
+
+@section scripts {
+
+    <environment include="Development">
+        <script src="~/js/signalr-client-1.0.0-alpha2-final.min.js"></script>
+    </environment>
+
+    <script>
+        $(function () {
+            let connection = new signalR.HubConnection('/SignalRTest');
+
+            connection.start()
+                .then(() => {
+                    console.log('connected');
+                    connection.invoke('send', 'Hello');
+                });
+
+            connection.on('AddMessage', data => {
+                console.log(data);
+                $('#messages').append($('<li>').text(data));
+            });
+
+            $("#sendButton").click(function () {
+                connection.invoke('send', $('#sendMessage').val());
+            });
+        });
+    </script>
+}
+
+<h2>SignalR Test</h2>
+
+<input type="text" id="sendMessage" placeholder="Enter report name" />
+<input type="button" id="sendButton" value="Send" />
+
+<ul id="messages"></ul>
