@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationWithoutIdenti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR", "SignalR\SignalR.csproj", "{31DEF477-A703-4C56-8128-08CED78E9460}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfContainedDeployments", "SelfContainedDeployments\SelfContainedDeployments.csproj", "{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfContainedDeployments", "SelfContainedDeployments\SelfContainedDeployments.csproj", "{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{786F2ABB-E3FF-4616-9129-E48D10C4F081}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{786F2ABB-E3FF-4616-9129-E48D10C4F081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{786F2ABB-E3FF-4616-9129-E48D10C4F081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{786F2ABB-E3FF-4616-9129-E48D10C4F081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{786F2ABB-E3FF-4616-9129-E48D10C4F081}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
