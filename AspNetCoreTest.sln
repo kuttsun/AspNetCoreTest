@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultilingualWebsite", "MultilingualWebsite\MultilingualWebsite.csproj", "{D35CE7E5-99C8-4344-8AC4-46F32F8CD5A8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationWithoutIdentity", "AuthenticationWithoutIdentity\AuthenticationWithoutIdentity.csproj", "{F19F7F49-E43E-4DB8-B7EF-062930776A3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR", "SignalR\SignalR.csproj", "{31DEF477-A703-4C56-8128-08CED78E9460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR", "SignalR\SignalR.csproj", "{31DEF477-A703-4C56-8128-08CED78E9460}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfContainedDeployments", "SelfContainedDeployments\SelfContainedDeployments.csproj", "{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{31DEF477-A703-4C56-8128-08CED78E9460}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31DEF477-A703-4C56-8128-08CED78E9460}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31DEF477-A703-4C56-8128-08CED78E9460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
