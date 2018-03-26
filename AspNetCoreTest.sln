@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR", "SignalR\SignalR.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelfContainedDeployments", "SelfContainedDeployments\SelfContainedDeployments.csproj", "{D438B0A6-4C7D-44C4-9CE0-C506B9DC3E51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{786F2ABB-E3FF-4616-9129-E48D10C4F081}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{786F2ABB-E3FF-4616-9129-E48D10C4F081}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminLTE", "AdminLTE\AdminLTE.csproj", "{A2278722-F1F8-468C-AF2A-C5AF2C1D98CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{786F2ABB-E3FF-4616-9129-E48D10C4F081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{786F2ABB-E3FF-4616-9129-E48D10C4F081}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{786F2ABB-E3FF-4616-9129-E48D10C4F081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2278722-F1F8-468C-AF2A-C5AF2C1D98CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2278722-F1F8-468C-AF2A-C5AF2C1D98CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2278722-F1F8-468C-AF2A-C5AF2C1D98CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2278722-F1F8-468C-AF2A-C5AF2C1D98CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
