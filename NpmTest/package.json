@@ -2,10 +2,21 @@
   "version": "1.0.0",
   "name": "asp.net",
   "private": true,
+  "scripts": {
+    "copyLib": "node npmfile copyLib()",
+    "myTask": "node npmfile myTask()"
+  },
   "devDependencies": {
+    "admin-lte": "^2.4.3",
     "bootstrap": "^3.3.7",
+    "fs-extra": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-uglify": "^3.0.0",
     "jquery": "^2.2.0",
     "jquery-validation": "^1.14.0",
-    "jquery-validation-unobtrusive": "^3.2.6"
+    "jquery-validation-unobtrusive": "^3.2.6",
+    "rimraf": "^2.6.2"
   }
 }
