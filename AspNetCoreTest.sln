@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RuntimeIdentifiers", "RuntimeIdentifiers\RuntimeIdentifiers.csproj", "{F6CCF9A9-D075-402D-BCEE-B0038B78E714}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NpmTest", "NpmTest\NpmTest.csproj", "{9B088940-BB93-4241-9AE3-B6A131C21E98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadFiles", "UploadFiles\UploadFiles.csproj", "{7B162EAF-2FCA-4E64-994A-C46ADED7EC9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{F6CCF9A9-D075-402D-BCEE-B0038B78E714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6CCF9A9-D075-402D-BCEE-B0038B78E714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6CCF9A9-D075-402D-BCEE-B0038B78E714}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B088940-BB93-4241-9AE3-B6A131C21E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B088940-BB93-4241-9AE3-B6A131C21E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B088940-BB93-4241-9AE3-B6A131C21E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B088940-BB93-4241-9AE3-B6A131C21E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B162EAF-2FCA-4E64-994A-C46ADED7EC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B162EAF-2FCA-4E64-994A-C46ADED7EC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B162EAF-2FCA-4E64-994A-C46ADED7EC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B162EAF-2FCA-4E64-994A-C46ADED7EC9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
