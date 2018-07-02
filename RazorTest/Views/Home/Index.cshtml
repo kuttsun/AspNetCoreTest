@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<p>
+    <ul id="list"></ul>
+</p>
+
+@section scripts {
+
+    @{
+        var items = new string[] { "abc", null, "def" };
+    }
+
+<script>
+    var array = [];
+
+    @foreach (var item in items)
+    {
+        @:array.push(@Html.Raw(item != null ? $"'{item}'" : "null"));
+    }
+
+    $(function () {
+        console.log(array);
+    });
+</script>
+}
