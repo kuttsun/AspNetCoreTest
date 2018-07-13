@@ -22,4 +22,8 @@ namespace DependencyInjection
     public interface IOperationSingletonInstance : IOperation
     {
     }
+
+    public interface ISample
+    {
+    }
 }

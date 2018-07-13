@@ -15,18 +15,21 @@ namespace DependencyInjection.Controllers
         private readonly IOperationScoped _scopedOperation;
         private readonly IOperationSingleton _singletonOperation;
         private readonly IOperationSingletonInstance _singletonInstanceOperation;
+        IEnumerable<ISample> _samples;
 
         public HomeController(OperationService operationService,
             IOperationTransient transientOperation,
             IOperationScoped scopedOperation,
             IOperationSingleton singletonOperation,
-            IOperationSingletonInstance singletonInstanceOperation)
+            IOperationSingletonInstance singletonInstanceOperation,
+            IEnumerable<ISample> samples)
         {
             _operationService = operationService;
             _transientOperation = transientOperation;
             _scopedOperation = scopedOperation;
             _singletonOperation = singletonOperation;
             _singletonInstanceOperation = singletonInstanceOperation;
+            _samples = samples;
         }
 
         public IActionResult Index()
