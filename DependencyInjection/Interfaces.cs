@@ -25,5 +25,6 @@ namespace DependencyInjection
 
     public interface ISample
     {
+        string Name { get; }
     }
 }

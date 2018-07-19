@@ -41,13 +41,24 @@ namespace DependencyInjection
             services.AddSingleton<IOperationSingletonInstance>(new Operation(Guid.Empty));
             services.AddTransient<OperationService, OperationService>();
 
-            var samples = new List<ISample>
-            {
-                new Sample1(),
-                new Sample2(),
-                new Sample3()
-            };
-            services.AddSingleton<IEnumerable<ISample>>(samples);
+            //var samples = new List<ISample>
+            //{
+            //    new Sample1(),
+            //    new Sample2(),
+            //    new Sample3()
+            //};
+            //services.AddSingleton<IEnumerable<ISample>>(samples);
+
+            //services.AddSingleton<IEnumerable<ISample>>(new List<ISample>
+            //{
+            //    new Sample1(),
+            //    new Sample2(),
+            //    new Sample3()
+            //});
+
+            services.AddSingleton<ISample, Sample1>();
+            services.AddSingleton<ISample, Sample2>();
+            services.AddSingleton<ISample, Sample3>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

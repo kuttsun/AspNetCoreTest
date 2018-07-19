@@ -7,16 +7,16 @@ namespace DependencyInjection
 {
     public class Sample1 : ISample
     {
-        public string Hoge { get; set; } = "";
+        public string Name { get; } = "Sample1";
     }
 
     public class Sample2 : ISample
     {
-        public string Hoge { get; set; } = "";
+        public string Name { get; } = "Sample2";
     }
 
     public class Sample3 : ISample
     {
-        public string Hoge { get; set; } = "";
+        public string Name { get; } = "Sample3";
     }
 }

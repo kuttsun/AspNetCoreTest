@@ -30,6 +30,11 @@ namespace DependencyInjection.Controllers
             _singletonOperation = singletonOperation;
             _singletonInstanceOperation = singletonInstanceOperation;
             _samples = samples;
+
+            foreach (var sample in _samples)
+            {
+                Debug.WriteLine(sample.GetType().Name);
+            }
         }
 
         public IActionResult Index()
