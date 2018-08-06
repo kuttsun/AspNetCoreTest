@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+@using Session.Controllers
+@model List<Person>
+<h2>@ViewData["Title"]</h2>
+<h3>TempData = @ViewData["TempData"]</h3>
+<h3>Session = @ViewData["Session"]</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@foreach (var person in Model)
+{
+    <ul>
+        <li>@person?.Name</li>
+        <li>@person?.Age</li>
+    </ul>
+}
