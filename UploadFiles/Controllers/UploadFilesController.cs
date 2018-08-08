@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 
@@ -42,6 +43,15 @@ namespace UploadFiles.Controllers
             // Don't rely on or trust the FileName property without validation.
 
             return Ok(new { count = files.Count, size, filePath });
+        }
+
+        public IActionResult Download()
+        {
+            var str = "{ \"foo\" : \"test\" }";
+            var filename = "Result-" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".json";
+
+            //ファイルをダウンロード
+            return File(new MemoryStream(Encoding.UTF8.GetBytes(str)), "application/json", filename);
         }
     }
 }
