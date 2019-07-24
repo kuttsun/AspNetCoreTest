@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInjection", "Depe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Session", "Session\Session.csproj", "{36CBF201-DFB8-4AF4-A52F-B15F56D2EC0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic", "Basic\Basic.csproj", "{ED87595E-1C00-4A12-8326-BC4CA03BFF28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basic", "Basic\Basic.csproj", "{ED87595E-1C00-4A12-8326-BC4CA03BFF28}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VueTest", "VueTest\VueTest.csproj", "{21F97B69-2C54-4198-8CC5-A4CFCCBB804F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{ED87595E-1C00-4A12-8326-BC4CA03BFF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED87595E-1C00-4A12-8326-BC4CA03BFF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED87595E-1C00-4A12-8326-BC4CA03BFF28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21F97B69-2C54-4198-8CC5-A4CFCCBB804F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21F97B69-2C54-4198-8CC5-A4CFCCBB804F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21F97B69-2C54-4198-8CC5-A4CFCCBB804F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21F97B69-2C54-4198-8CC5-A4CFCCBB804F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

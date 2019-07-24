@@ -263,3 +263,4 @@ __pycache__/
 # リソースファイル作成時に Visual Studio が自動生成する .Designer.cs ファイルは ASP.NET Core では不要
 MultilingualWebsite/Resources/**/*.Designer.cs
 NpmTest/wwwroot/lib/
+/VueTest/wwwroot

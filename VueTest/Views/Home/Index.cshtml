@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div id="app">
+    <p>Length: {{ length }}</p>
+    <ul>
+        <li v-for="(item, i) in list" :key="item">
+            {{ item }}
+            <button v-on:click="list.splice(i, 1)">remove</button>
+        </li>
+    </ul>
+    <button v-on:click="addItem">add</button>
+</div>
+
+@section scripts {
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0,
+                list: ['Apple', 'Banana', 'Strawberry']
+            },
+            computed: {
+                length: function () {
+                    return this.list.length
+                }
+            },
+            methods: {
+                addItem: function () {
+                    this.list.push('Orange' + (++this.counter).toString())
+                }
+            }
+        })
+    </script>
+}
