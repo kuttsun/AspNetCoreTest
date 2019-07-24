@@ -12,6 +12,7 @@ namespace Basic.Controllers
     {
         public IActionResult Index()
         {
+            //return View(new SampleViewModel());
             return View();
         }
 
@@ -23,13 +24,35 @@ namespace Basic.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
 
         [HttpPost]
         public IActionResult PostTest(SampleViewModel vm)
         {
             return View(vm);
+        }
+
+        [HttpPost]
+        public IActionResult PostTest2(string[] names, int[] ages)
+        {
+            var vm = new SampleViewModel();
+            foreach (var (v, i) in names.Select((v, i) => (v, i)))
+            {
+                vm.Persons.Add(new Person { Name = v, Age = ages[i] });
+            }
+            return View("PostTest", vm);
+        }
+
+        [HttpPost]
+        public IActionResult PostTest3(Dictionary<int, string> dict)
+        {
+            var vm = new SampleViewModel();
+            foreach (var (v, i) in dict.Select((v, i) => (v, i)))
+            {
+                vm.Persons.Add(new Person { Name = v.Value, Age = v.Key });
+            }
+            return View("PostTest", vm);
         }
     }
 }

@@ -7,6 +7,6 @@ namespace Basic.Models
 {
     public class SampleViewModel
     {
-        public IReadOnlyList<Person> Persons { get; set; }
+        public List<Person> Persons { get; set; }
     }
 }

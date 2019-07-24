@@ -2,27 +2,46 @@
     ViewData["Title"] = "Home Page";
 }
 @using Basic.Models
-@model SampleViewModel
+@{
+    Dictionary<int, string> dict = new Dictionary<int, string>();
+}
+@*@model SampleViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <form asp-controller="Home" asp-action="PostTest">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (var i = 0; i < 5; i++)
+                {
+                    <tr>
+                        <td><input type="text" class="form-control" asp-for="@Model.Persons[i].Name"></td>
+                        <td><input type="text" class="form-control" asp-for="@Model.Persons[i].Age"></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <input type="submit" class="btn btn-primary" />
+    </form>*@
 
-<form asp-controller="Home" asp-action="PostTest">
+@*@model SampleViewModel*@
+
+<form asp-controller="Home" asp-action="PostTest3">
     <table class="table">
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Age</th>
             </tr>
         </thead>
         <tbody>
             @for (var i = 0; i < 5; i++)
             {
                 <tr>
-                    <td><input type="text" class="form-control" asp-for="@Model.Persons[i].Name"></td>
-                    <td><input type="text" class="form-control" asp-for="@Model.Persons[i].Age"></td>
+                    <td><input type="text" class="form-control" asp-for=@dict[i]></td>
                 </tr>
             }
         </tbody>
